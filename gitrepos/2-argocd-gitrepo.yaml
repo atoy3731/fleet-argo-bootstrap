@@ -7,9 +7,9 @@ spec:
   repo: https://github.com/atoy3731/fleet-argo-bootstrap.git
   branch: main
   targets:
-  - name: test
+  - name: argocd
     clusterSelector:
       matchLabels:
-        cluster: test
+        argocd: enabled
   paths:
   - helm/argocd
