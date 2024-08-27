@@ -1,0 +1,14 @@
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: flux
+  namespace: fleet-default
+spec:
+  repo: https://github.com/atoy3731/fleet-argo-bootstrap.git
+  targets:
+  - name: test
+    clusterSelector:
+      matchLabels:
+        cluster: test
+  paths:
+  - helm/argocd

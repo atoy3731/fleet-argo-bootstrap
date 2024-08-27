@@ -1,0 +1,12 @@
+defaultNamespace: argocd
+
+labels:
+  app: argocd
+
+helm:
+  repo: https://argoproj.github.io/argo-helm
+  chart: argo-cd
+  version: 7.4.7
+  releaseName: argocd
+  valuesFiles:
+  - values.yaml
