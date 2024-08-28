@@ -1,0 +1,9 @@
+defaultNamespace: demo-app
+
+labels:
+  app: demo-app
+
+dependsOn:
+  - selector:
+      matchLabels:
+        app: argocd

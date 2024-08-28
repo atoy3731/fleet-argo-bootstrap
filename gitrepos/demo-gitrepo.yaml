@@ -1,14 +1,15 @@
 apiVersion: fleet.cattle.io/v1alpha1
 kind: GitRepo
 metadata:
-  name: bigbang
+  name: demo-app
   namespace: fleet-default
 spec:
-  repo: https://github.com/atoy3731/fleet-bigbang-umbrella.git
+  repo: https://github.com/atoy3731/fleet-argo-bootstrap.git
+  branch: main
   targets:
-  - name: test
+  - name: demo
     clusterSelector:
       matchLabels:
-        cluster: test
+        mission: demo
   paths:
-  - ./helm/bigbang/
+  - helm/demo
