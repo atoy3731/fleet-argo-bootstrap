@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/atoy3731/rancher-app.git
     targetRevision: helm
-    path: "./helm"
+    path: "./helm/chart"
   destination:
     server: https://kubernetes.default.svc
     namespace: demo
