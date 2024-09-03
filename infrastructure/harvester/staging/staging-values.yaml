@@ -6,8 +6,6 @@ cluster:
     argocd: enabled
     mission: demo
     env: staging
-  config:
-      cloud_provider_config: secret://fleet-default:staging-cloudprovider
 
 nodepools:
   - name: rke2-staging-cp-nodes

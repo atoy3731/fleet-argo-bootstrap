@@ -6,8 +6,6 @@ cluster:
     argocd: enabled
     mission: demo
     env: prod
-  config:
-      cloud_provider_config: secret://fleet-default:prod-cloudprovider
 
 nodepools:
   - name: rke2-prod-cp-nodes

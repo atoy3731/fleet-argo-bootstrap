@@ -14,8 +14,6 @@ cluster:
     mission: demo
   config:
     kubernetesVersion: v1.28.10+rke2r1
-    globalConfig:
-      cloud_provider_name: harvester
     cni: canal
     systemDefaultRegistry: rgcrprod.azurecr.us
     registries:
