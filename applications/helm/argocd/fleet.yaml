@@ -4,8 +4,7 @@ labels:
   app: argocd
 
 helm:
-  repo: https://argoproj.github.io/argo-helm
-  chart: argo-cd
+  repo: oci://harbor.atoy.dev/public/argo-cd
   version: 7.4.6
   releaseName: argocd
   valuesFiles:
