@@ -1,11 +1,11 @@
 apiVersion: fleet.cattle.io/v1alpha1
 kind: GitRepo
 metadata:
-  name: aws-rke2-cluster
+  name: aws-rke2-prod-cluster
   namespace: fleet-local
 spec:
   repo: git@github.com:atoy3731/fleet-argo-bootstrap.git
-  branch: staging
+  branch: prod
   clientSecretName: private-key
   targets:
     - clusterSelector:
