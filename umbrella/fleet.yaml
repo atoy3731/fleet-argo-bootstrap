@@ -1,3 +1,0 @@
-defaultNamespace: fleet-default
-kustomize:
-  dir: "./resources/"

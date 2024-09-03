@@ -1,0 +1,18 @@
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: aws-rke2-cluster
+  namespace: fleet-local
+spec:
+  repo: git@github.com:atoy3731/rancher-cluster-create.git
+  branch: kube
+  clientSecretName: private-key
+  targets:
+    - clusterSelector:
+        matchExpressions:
+          - key: provider.cattle.io
+            operator: NotIn
+            values:
+              - harvester
+  paths:
+  - aws-cluster
