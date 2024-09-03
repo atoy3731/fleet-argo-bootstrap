@@ -18,7 +18,6 @@ cluster:
       cloud_provider_name: harvester
       cloud_provider_config: secret://fleet-default:placeholder
     cni: canal
-    systemDefaultRegistry: rgcrprod.azurecr.us
     kube_controller_manager_arg:
       - bind-address=127.0.0.1
       - use-service-account-credentials=true
