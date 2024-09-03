@@ -15,4 +15,4 @@ spec:
             values:
               - harvester
   paths:
-  - ./infrastructure/aws/prod
+  - ./infrastructure/harvester/prod

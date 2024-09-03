@@ -1,5 +1,5 @@
-cloudprovider: amazonec2
-cloudCredentialSecretName: cc-27qqv
+cloudprovider: harvester
+cloudCredentialSecretName: cc-mnj7p
 
 rancher:
   cattle:
@@ -8,15 +8,17 @@ rancher:
 cluster:
   annotations: {}
   labels:
-    location: aws
-    mission: demo
+    location: harvester
+    demo: enabled
     argocd: enabled
+    mission: demo
   config:
     kubernetesVersion: v1.28.10+rke2r1
+    globalConfig:
+      cloud_provider_name: harvester
+      cloud_provider_config: secret://fleet-default:placeholder
     cni: canal
     systemDefaultRegistry: rgcrprod.azurecr.us
-    monitoring:
-      enabled: false
     registries:
       enabled: true
       configs:
@@ -24,7 +26,6 @@ cluster:
           authConfigSecretName: registryconfig-auth-t95qm
           caBundle: ''
           insecureSkipVerify: false
-    profile: ""
     kube_controller_manager_arg:
       - bind-address=127.0.0.1
       - use-service-account-credentials=true
@@ -42,9 +43,11 @@ cluster:
       - audit-policy-file=/etc/rancher/rke2/audit-policy.yaml
       - audit-log-mode=blocking-strict
       - audit-log-maxage=30
+      # - feature-gates=PortForwardWebsockets=true
     kubelet_arg: 
       - protect-kernel-defaults=true
       - read-only-port=0
       - authorization-mode=Webhook
       - streaming-connection-idle-timeout=5m
+
 nodepools: {}
