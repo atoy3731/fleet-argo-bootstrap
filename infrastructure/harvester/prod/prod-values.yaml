@@ -9,7 +9,7 @@ cluster:
 
 nodepools:
   - name: rke2-prod-cp-nodes
-    quantity: 1
+    quantity: 3
     etcd: true
     controlplane: true
     worker: false
@@ -161,8 +161,8 @@ nodepools:
       - sudo mkdir -p /opt/rke2-artifacts/ /etc/rancher/rke2/ /var/lib/rancher/rke2/server/manifests/
       - sudo useradd -r -c "etcd user" -s /sbin/nologin -M etcd -U
 
-  - name: worker-nodes
-    quantity: 1
+  - name: rke2-prod-worker-nodes
+    quantity: 3
     etcd: false
     controlplane: false
     worker: true
