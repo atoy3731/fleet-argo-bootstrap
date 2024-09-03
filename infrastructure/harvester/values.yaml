@@ -17,6 +17,14 @@ cluster:
     globalConfig:
       cloud_provider_name: harvester
     cni: canal
+    systemDefaultRegistry: rgcrprod.azurecr.us
+    registries:
+      enabled: true
+      configs:
+        - name: rgcrprod.azurecr.us
+          authConfigSecretName: registryconfig-auth-t95qm
+          caBundle: ''
+          insecureSkipVerify: false
     kube_controller_manager_arg:
       - bind-address=127.0.0.1
       - use-service-account-credentials=true
