@@ -46,6 +46,25 @@ nodepools:
     #cloud-config
     package_update: true
     write_files:
+    - path: /var/lib/rancher/rke2/server/manifests/rke2-ingress-nginx-config.yaml
+      owner: root
+      content: |
+        # /var/lib/rancher/rke2/server/manifests/rke2-ingress-nginx-config.yaml
+        ---
+        apiVersion: helm.cattle.io/v1
+        kind: HelmChartConfig
+        metadata:
+          name: rke2-ingress-nginx
+          namespace: kube-system
+        spec:
+          valuesContent: |-
+            controller:
+              service:
+                enabled: true
+                type: NodePort
+                nodePorts:
+                  http: 30080
+                  https: 30443
     - path: /etc/sysctl.conf
       owner: root
       content: |
