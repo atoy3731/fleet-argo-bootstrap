@@ -30,4 +30,4 @@ spec:
         argocd: enabled
         env: staging
   paths:
-  - helm/argocd
+  - applications/helm/argocd

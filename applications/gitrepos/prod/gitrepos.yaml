@@ -30,4 +30,4 @@ spec:
         argocd: enabled
         env: prod
   paths:
-  - helm/argocd
+  - applications/helm/argocd
