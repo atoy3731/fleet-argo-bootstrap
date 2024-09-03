@@ -1,6 +1,23 @@
 apiVersion: fleet.cattle.io/v1alpha1
 kind: GitRepo
 metadata:
+  name: demo-app-prod
+  namespace: fleet-default
+spec:
+  repo: https://github.com/atoy3731/fleet-argo-bootstrap.git
+  branch: prod
+  targets:
+  - name: demo
+    clusterSelector:
+      matchLabels:
+        mission: demo
+        env: prod
+  paths:
+  - helm/demo
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
   name: argocd-prod
   namespace: fleet-default
 spec:
