@@ -16,7 +16,6 @@ cluster:
     kubernetesVersion: v1.28.10+rke2r1
     globalConfig:
       cloud_provider_name: harvester
-      cloud_provider_config: secret://fleet-default:placeholder
     cni: canal
     kube_controller_manager_arg:
       - bind-address=127.0.0.1
