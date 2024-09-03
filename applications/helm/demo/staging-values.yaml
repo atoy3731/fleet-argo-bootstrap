@@ -1,4 +1,5 @@
 application:
+  source:
     helm:
       values: |+
         config:
