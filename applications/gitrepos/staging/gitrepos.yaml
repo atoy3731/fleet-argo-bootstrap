@@ -13,7 +13,7 @@ spec:
         mission: demo
         env: staging
   paths:
-  - helm/demo
+  - applications/helm/demo
 ---
 apiVersion: fleet.cattle.io/v1alpha1
 kind: GitRepo

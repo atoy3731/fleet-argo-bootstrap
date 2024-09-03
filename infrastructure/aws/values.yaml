@@ -10,6 +10,7 @@ cluster:
   labels:
     location: aws
     mission: demo
+    argocd: enabled
   config:
     kubernetesVersion: v1.28.10+rke2r1
     cni: canal
