@@ -9,7 +9,7 @@ cluster:
   annotations: {}
   labels:
     location: aws
-    demo: enabled
+    mission: demo
   config:
     kubernetesVersion: v1.26.13+rke2r1
     cni: canal
