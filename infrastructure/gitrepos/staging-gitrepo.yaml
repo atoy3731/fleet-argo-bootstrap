@@ -6,7 +6,7 @@ metadata:
 spec:
   repo: git@github.com:atoy3731/fleet-argo-bootstrap.git
   branch: staging
-  clientSecretName: private-key
+  clientSecretName: fleet-argo-bootstrap-key
   targets:
     - clusterSelector:
         matchExpressions:
