@@ -1,2 +1,6 @@
-config:
-  backgroundColor: red
+application:
+  source:
+    helm:
+      values: |+
+        config:
+          backgroundColor: red

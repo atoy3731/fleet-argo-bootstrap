@@ -5,7 +5,7 @@ labels:
 
 helm:
   chart: oci://harbor.atoy.dev/public/argo-cd
-  version: 7.4.6
+  version: 7.4.7
   releaseName: argocd
   valuesFiles:
   - values.yaml
