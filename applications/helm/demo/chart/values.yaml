@@ -1,16 +1,12 @@
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: demo
-  namespace: argocd
-spec:
+application:
   project: default
   source:
     repoURL: https://github.com/atoy3731/rancher-app.git
     targetRevision: helm
     path: "./helm/chart"
     helm:
-      values: |
+      values: |+
+        foo: bar
   destination:
     server: https://kubernetes.default.svc
     namespace: demo

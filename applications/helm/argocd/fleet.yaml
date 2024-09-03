@@ -6,7 +6,23 @@ labels:
 helm:
   repo: https://argoproj.github.io/argo-helm
   chart: argo-cd
-  version: 7.4.7
+  version: 7.4.6
   releaseName: argocd
   valuesFiles:
   - values.yaml
+
+targetCustomizations:
+- name: prod
+  helm:
+    valuesFiles:
+    - prod-values.yaml
+  clusterSelector:
+    matchLabels:
+      env: prod
+- name: staging
+  helm:
+    valuesFiles:
+    - staging-values.yaml
+  clusterSelector:
+    matchLabels:
+      env: staging

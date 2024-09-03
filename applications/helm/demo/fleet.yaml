@@ -7,3 +7,19 @@ dependsOn:
   - selector:
       matchLabels:
         app: argocd
+
+targetCustomizations:
+- name: prod
+  helm:
+    valuesFiles:
+    - prod-values.yaml
+  clusterSelector:
+    matchLabels:
+      env: prod
+- name: staging
+  helm:
+    valuesFiles:
+    - staging-values.yaml
+  clusterSelector:
+    matchLabels:
+      env: staging

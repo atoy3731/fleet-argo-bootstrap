@@ -1,15 +1,16 @@
 apiVersion: fleet.cattle.io/v1alpha1
 kind: GitRepo
 metadata:
-  name: argocd
+  name: argocd-staging
   namespace: fleet-default
 spec:
   repo: https://github.com/atoy3731/fleet-argo-bootstrap.git
-  branch: main
+  branch: staging
   targets:
   - name: argocd
     clusterSelector:
       matchLabels:
         argocd: enabled
+        env: staging
   paths:
   - helm/argocd

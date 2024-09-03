@@ -1,0 +1,16 @@
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: demo-app-staging
+  namespace: fleet-default
+spec:
+  repo: https://github.com/atoy3731/fleet-argo-bootstrap.git
+  branch: staging
+  targets:
+  - name: demo
+    clusterSelector:
+      matchLabels:
+        mission: demo
+        env: staging
+  paths:
+  - helm/demo
