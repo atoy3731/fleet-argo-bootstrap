@@ -13,7 +13,7 @@ cluster:
     argocd: enabled
     mission: demo
   config:
-    kubernetesVersion: v1.28.10+rke2r1
+    kubernetesVersion: v1.28.12+rke2r1
     cni: canal
     systemDefaultRegistry: rgcrprod.azurecr.us
     registries:

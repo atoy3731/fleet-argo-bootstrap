@@ -1,2 +1,5 @@
-config:
-  backgroundColor: red
+application:
+    helm:
+      values: |+
+        config:
+          backgroundColor: white
