@@ -18,10 +18,10 @@ nodepools:
     paused: false
     cpuCount: 4
     diskSize: 30
-    imageName: main/image-js94l
+    imageName: default/image-ztkdg
     keyPairName: ""
     memorySize: 8
-    networkName: main/main
+    networkName: default/vlan1
     sshUser: ubuntu
     userData: |
       #cloud-config
@@ -171,10 +171,10 @@ nodepools:
     paused: false
     cpuCount: 4
     diskSize: 30
-    imageName: main/image-js94l
+    imageName: default/image-ztkdg
     keyPairName: ""
     memorySize: 8
-    networkName: main/main
+    networkName: default/vlan1
     sshUser: ubuntu
     userData: |
       #cloud-config

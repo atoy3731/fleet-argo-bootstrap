@@ -1,9 +1,9 @@
 cloudprovider: harvester
-cloudCredentialSecretName: cc-mnj7p
+cloudCredentialSecretName: cc-c4st9
 
 rancher:
   cattle:
-    url: rancher.kube.lol
+    url: rancher.thelab.lol
 
 cluster:
   annotations: {}
