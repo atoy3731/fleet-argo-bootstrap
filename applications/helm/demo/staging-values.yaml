@@ -3,4 +3,4 @@ application:
     helm:
       values: |+
         config:
-          backgroundColor: white
+          backgroundColor: red
