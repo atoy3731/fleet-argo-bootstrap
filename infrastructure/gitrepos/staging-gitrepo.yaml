@@ -1,7 +1,7 @@
 apiVersion: fleet.cattle.io/v1alpha1
 kind: GitRepo
 metadata:
-  name: aws-rke2-staging-cluster
+  name: harvester-rke2-staging-cluster
   namespace: fleet-local
 spec:
   repo: git@github.com:atoy3731/fleet-argo-bootstrap.git

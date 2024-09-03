@@ -1,7 +1,7 @@
 defaultNamespace: default
 helm:
   chart: https://github.com/rancherfederal/rancher-cluster-templates/releases/download/rancher-cluster-templates-0.5.2/rancher-cluster-templates-0.5.2.tgz
-  releaseName: aws-rke2-staging-cluster
+  releaseName: harvester-rke2-staging-cluster
   valuesFiles:
     - ../values.yaml
     - ./staging-values.yaml
@@ -10,7 +10,7 @@ diff:
    - apiVersion: provisioning.cattle.io/v1
      kind: Cluster
      namespace: fleet-default
-     name: aws-rke2-staging-cluster
+     name: harvester-rke2-staging-cluster
      operations:
      - {"op": "remove", "path": "/spec/localClusterAuthEndpoint"}
      - {"op": "remove", "path": "/spec/rkeConfig"}
