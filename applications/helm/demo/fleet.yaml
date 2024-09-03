@@ -1,5 +1,9 @@
 defaultNamespace: demo-app
 
+helm:
+  chart: ./chart
+  releaseName: demo-app
+
 labels:
   app: demo-app
 
